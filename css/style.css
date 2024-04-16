@@ -1,0 +1,143 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+body{
+    background-color: black;
+
+}
+i{
+    cursor: pointer;
+}
+nav{
+    z-index: 9999;
+    position: fixed;
+    left: -263.75px;
+top: 0;
+bottom: 0;
+width: 320px;
+display: flex;
+color: white;
+}
+.side-bar{
+    background-color: white;
+    width: 60px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+.side-bar div a i{
+    color: black;
+}
+
+.side-bar-menu{
+    width: 260px;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+}
+.side-bar-menu ul{
+position: relative;
+overflow:hidden;
+
+}
+.side-bar-menu ul li{
+padding: 8px;
+position: relative;
+top: 300px;
+cursor: pointer;
+}
+
+
+
+
+
+
+.category-layer{
+top: 100%;
+width: 100%;
+height: 100%;
+left: 0;
+right: 0;
+background-color: rgba(255, 255, 255, 0.8);
+color: black;
+transition: all 400ms;
+}
+
+.meal-layer {
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    transition: all 400ms;
+    display: flex;
+    align-items: center;
+}
+.container .row .col-md-3 div{
+    border-radius: 24px;
+
+}
+.container .row .col-md-3:hover .category-layer{
+    top: 0;
+}
+.container .row .col-md-3:hover .meal-layer{
+top: 0;
+}
+
+input::placeholder{
+    color: #6C757D !important;
+}
+
+.container button:hover{
+background-color: #DC3545 !important;
+color: white !important;
+}
+.container .row .col-md-8 a .bg-success{
+
+    transition: all 400ms;
+}
+.container .row .col-md-8 a .bg-danger{
+    transition: all 400ms;
+}
+
+.container .row .col-md-8 .bg-success:hover {
+background-color: #157347 !important;
+}
+
+.container .row .col-md-8 .bg-danger:hover {
+    background-color: #BB2D3B !important;
+    }
+    
+
+.container .row .col-md-8 ul li{
+border-radius: 8px;
+margin: 8px;
+padding:4px ;
+}
+
+.container .row .col-md-8 .recipes li{
+    background-color: #CFF4FC;
+}
+
+.container .row .col-md-8 .tags li{
+    background-color: #F8D7DA;
+}
+
+
+.loading-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+
+}

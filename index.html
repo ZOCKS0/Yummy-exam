@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="loading-screen position-absolute top-0 bottom-0 start-0 end-0 bg-black d-none">
+        <i class="fa-solid fa-5x fa-spinner fa-spin text-white"></i>
+    </div>
+
+    <nav >
+
+        <div class="side-bar-menu ">
+            <ul class="list-unstyled">
+                <li onclick="search()">Search</li>
+                <li onclick="getCategories()">Categories</li>
+                <li onclick="getArea()">Area</li>
+                <li onclick="getIngredients()">Ingredients</li>
+                <li onclick="contactUs()">Contact us</li>
+            </ul>
+            <footer>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div>
+                    <p>Copyright Â© 2019 All Rights </br>
+                        Reserved.</p>
+                </div>
+            </footer>
+        </div>
+
+        <div class="side-bar py-2">
+            <img src="images/logo.png" width="80%" alt="logo">
+            <i id="open-close" class="fa-solid fa-align-justify fa-2xl text-black"></i>
+            <div class="d-flex flex-column text-black">
+                <a href=""><i class="fa-solid fa-globe"></i></a>
+                <a href=""><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+<div class="container w-75" id="searchPart">
+
+</div>
+
+    <div class="container" >
+        <div class="row p-5" id="content">
+            
+</div>
+    </div> 
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
