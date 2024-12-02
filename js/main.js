@@ -25,7 +25,7 @@ ocIcon.addEventListener("click", function () {
         for (let i = 4; i >= 0; i--) {
 
 
-            $(".side-bar-menu ul li").eq(i).animate({ top: "300px" }, (z + 5) * 100)
+            $(".side-bar-menu ul li").eq(i).animate({ top: "300px" }, (z + 5) * 50)
             z++;
         }
     }
@@ -42,6 +42,7 @@ async function startPage() {
 }
 
 function getMeals(meal) {
+      document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
     cartona = "";
     for (let i = 0; meal.length > i; i++) {
@@ -68,17 +69,18 @@ function getMeals(meal) {
 
 function search() {
     loadingScreen.classList.remove("d-none");
+  document.getElementById("mealDetails").innerHTML = "";
 
     document.querySelector("#searchPart").innerHTML = `
         
     <div class="row p-5 " >
-    <div class="mb-md-0 mb-5 col-md-6">
-    <input onkeyup="searchByName(this.value)" type="text" class="form-control bg-transparent text-white" placeholder="Search By Name">
+    <div class="mb-md-0 mb-5 col-md-6 col-12">
+    <input onkeyup="searchByName(this.value)" type="text" class="form-control ms-3 bg-transparent text-white" placeholder="Search By Name">
     </div>
-    <div class="col-md-6">
-    <input onkeyup="searchByLetter(this.value)" maxlength="1" type="text" class="form-control bg-transparent text-white" placeholder="Search By First Letter">
+    <div class="col-md-6 col-12">
+    <input onkeyup="searchByLetter(this.value)" maxlength="1" type="text" class="form-control ms-3 bg-transparent text-white" placeholder="Search By first Letter">
     </div>
-    </div>`
+    </div>`;
     document.querySelector("#content").innerHTML = "";
     loadingScreen.classList.add("d-none");
 
@@ -130,6 +132,7 @@ async function getCategories() {
 }
 
 function categories(category) {
+      document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
 
     cartona = "";
@@ -162,6 +165,7 @@ async function getCategoryMeals(meal) {
 
 function categoryMeals(meal) {
     cartona = ""
+      document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
 
     for (let i = 0; i < meal.length; i++) {
@@ -194,6 +198,7 @@ async function getArea() {
 }
 
 function areas(area) {
+      document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
     cartona = "";
     for (let i = 0; i < area.length; i++) {
@@ -220,6 +225,7 @@ async function getAreaMeals(area) {
 }
 
 function areaMeals(meal) {
+      document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
     cartona = "";
     for (let i = 0; i < meal.length; i++) {
@@ -252,6 +258,7 @@ async function getIngredients() {
 }
 
 function ingredients(ingredient) {
+      document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
     cartona = ""
     for (let i = 0; i < ingredient.length; i++) {
@@ -281,6 +288,7 @@ async function getIngredientMeals(meal) {
 
 
 function ingredientMeals(meal) {
+      document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
     cartona = ""
     for (let i = 0; i < meal.length; i++) {
@@ -308,38 +316,38 @@ function ingredientMeals(meal) {
 
 function contactUs() {
     loadingScreen.classList.remove("d-none");
-
+  document.getElementById("mealDetails").innerHTML = "";
     document.querySelector("#searchPart").innerHTML = "";
     cartona = `
     <div class="d-flex justify-Content-center align-items-center text-center flex-column">
     <div class="row">
 
-    <div class="col-md-6 g-3 text-center">
+    <div class="col-sm-6 col-12 g-3 text-center">
     <input onkeyup="AllInputs()" type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
     <div id="namealert" class="bg-danger-subtle text-center my-2 p-3 rounded-3 d-none ">Special characters and numbers not allowed</div>
     </div>
 
-    <div class="col-md-6 g-3">
+    <div class="col-sm-6 col-12 g-3">
     <input onkeyup="AllInputs()" type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
     <div id="emailalert" class="bg-danger-subtle text-center my-2 p-3 rounded-3 d-none">Email not valid *exemple@yyy.zzz</div>
 </div>
 
-    <div class="col-md-6 g-3">
+    <div class="col-sm-6 col-12 g-3">
     <input onkeyup="AllInputs()" type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone">
     <div id="phonealert" class="bg-danger-subtle text-center my-2 p-3 rounded-3 d-none">Enter valid Phone Number</div>
     </div>
 
-    <div class="col-md-6 g-3">
+    <div class="col-sm-6 col-12 g-3">
     <input onkeyup="AllInputs()" type="number" min="10" max="100" class="form-control" id="age" name="age" placeholder="Enter Your Age">
     <div id="agealert" class="bg-danger-subtle text-center my-2 p-3 rounded-3 d-none">Enter valid age</div>
     </div>
 
-    <div class="col-md-6 g-3">
+    <div class="col-sm-6 col-12 g-3">
     <input onkeyup="AllInputs()" type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password">
     <div id="passwordalert" class="bg-danger-subtle text-center my-2 p-3 rounded-3 d-none">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
     </div>
 
-    <div class="col-md-6 g-3">
+    <div class="col-sm-6 col-12 g-3">
     <input onkeyup="AllInputs()" type="password" class="form-control" id="repassword" name="repassword" placeholder="Repassword"    >
     <div id="repasswordalert" class="bg-danger-subtle text-center my-2 p-3 rounded-3 d-none">Enter valid repassword</div>
     </div>
