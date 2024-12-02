@@ -83,14 +83,13 @@ transition: all 400ms;
     display: flex;
     align-items: center;
 }
-.container .row .col-md-3 div{
+.container .row .meals div{
     border-radius: 24px;
-
 }
-.container .row .col-md-3:hover .category-layer{
+.container .row .meals:hover .category-layer{
     top: 0;
 }
-.container .row .col-md-3:hover .meal-layer{
+.container .row .meals:hover .meal-layer{
 top: 0;
 }
 
@@ -102,34 +101,34 @@ input::placeholder{
 background-color: #DC3545 !important;
 color: white !important;
 }
-.container .row .col-md-8 a .bg-success{
+#mealDetails .DetailsPage .row .detailMeal a .bg-success{
 
     transition: all 400ms;
 }
-.container .row .col-md-8 a .bg-danger{
+#mealDetails .DetailsPage .row .detailMeal a .bg-danger{
     transition: all 400ms;
 }
 
-.container .row .col-md-8 .bg-success:hover {
+#mealDetails .DetailsPage .row .detailMeal .bg-success:hover {
 background-color: #157347 !important;
 }
 
-.container .row .col-md-8 .bg-danger:hover {
+#mealDetails .DetailsPage .row .detailMeal .bg-danger:hover {
     background-color: #BB2D3B !important;
     }
     
 
-.container .row .col-md-8 ul li{
+#mealDetails .DetailsPage .row .detailMeal ul li{
 border-radius: 8px;
 margin: 8px;
 padding:4px ;
 }
 
-.container .row .col-md-8 .recipes li{
+#mealDetails .DetailsPage .row .detailMeal .recipes li{
     background-color: #CFF4FC;
 }
 
-.container .row .col-md-8 .tags li{
+#mealDetails .DetailsPage .row .detailMeal .tags li{
     background-color: #F8D7DA;
 }
 
@@ -140,4 +139,15 @@ padding:4px ;
     align-items: center;
     z-index: 99;
 
+}
+
+.DetailsPage{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    overflow-y: auto;
+    z-index: 100;
 }

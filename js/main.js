@@ -46,7 +46,7 @@ function getMeals(meal) {
     cartona = "";
     for (let i = 0; meal.length > i; i++) {
         cartona += `
-<div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer col-md-3 g-4">
+<div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer meals col-12 col-sm-6 col-md-4 col-lg-3 g-4">
 <div class=" position-relative overflow-hidden">
     <img src="${meal[i].strMealThumb}" class="w-100" alt="${meal[i].strMealThumb}">
     <div class="meal-layer position-absolute p-2">
@@ -54,7 +54,7 @@ function getMeals(meal) {
     </div>
 
         </div>
-        </div>`
+        </div>`;
     }
     document.querySelector("#content").innerHTML = cartona;
     loadingScreen.classList.add("d-none");
@@ -72,7 +72,7 @@ function search() {
     document.querySelector("#searchPart").innerHTML = `
         
     <div class="row p-5 " >
-    <div class="col-md-6">
+    <div class="mb-md-0 mb-5 col-md-6">
     <input onkeyup="searchByName(this.value)" type="text" class="form-control bg-transparent text-white" placeholder="Search By Name">
     </div>
     <div class="col-md-6">
@@ -105,7 +105,7 @@ function searchMeals(meal) {
     cartona = "";
     for (let i = 0; meal.length > i; i++) {
         cartona += `
-    <div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer col-md-3 g-4">
+    <div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer meals col-12 col-sm-6 col-md-4 col-lg-3 g-4">
     <div class=" position-relative overflow-hidden">
         <img src="${meal[i].strMealThumb}" class="w-100" alt="${meal[i].strMealThumb}">
         <div class="meal-layer position-absolute p-2">
@@ -113,7 +113,7 @@ function searchMeals(meal) {
         </div>
     
             </div>
-            </div>`
+            </div>`;
     }
     document.querySelector("#content").innerHTML = cartona;
     loadingScreen.classList.add("d-none");
@@ -135,7 +135,7 @@ function categories(category) {
     cartona = "";
     for (let i = 0; category.length > i; i++) {
         cartona += `
-            <div onclick="getCategoryMeals('${category[i].strCategory}')" class="col-md-3 g-4 cursor-pointer">
+            <div onclick="getCategoryMeals('${category[i].strCategory}')" class="meals col-12 col-sm-6 col-md-4 col-lg-3 g-4 cursor-pointer">
 <div  class=" position-relative overflow-hidden">
     <img src="${category[i].strCategoryThumb}" class="w-100" alt="${category[i].strCategoryThumb}">
     <div class="category-layer position-absolute p-2 text-center">
@@ -144,7 +144,7 @@ function categories(category) {
     </div>
 </div>
 
-        </div>`
+        </div>`;
         document.querySelector("#content").innerHTML = cartona;
         loadingScreen.classList.add("d-none");
 
@@ -166,14 +166,14 @@ function categoryMeals(meal) {
 
     for (let i = 0; i < meal.length; i++) {
         cartona += `
-<div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer col-md-3 g-4">
+<div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer meals col-12 col-sm-6 col-md-4 col-lg-3 g-4">
 <div class=" position-relative overflow-hidden">
     <img src="${meal[i].strMealThumb}" class="w-100" alt="${meal[i].strMealThumb}">
     <div class="meal-layer position-absolute p-2">
         <h3>${meal[i].strMeal}</h3>
     </div>
         </div>
-        </div>`
+        </div>`;
     }
     document.querySelector("#content").innerHTML = cartona;
     loadingScreen.classList.add("d-none");
@@ -198,14 +198,14 @@ function areas(area) {
     cartona = "";
     for (let i = 0; i < area.length; i++) {
         cartona += `
-            <div onclick="getAreaMeals('${area[i].strArea}')" class="col-md-3 g-4">
+            <div onclick="getAreaMeals('${area[i].strArea}')" class="meals col-12 col-sm-6 col-md-4 col-lg-3 g-4">
 <div  class="cursor-pointer position-relative overflow-hidden text-white text-center">
 <i class="fa-solid fa-house-laptop fa-4x"></i>
         <h3>${area[i].strArea}</h3>
         </div>
 
     </div>
-`
+`;
     }
     document.querySelector("#content").innerHTML = cartona;
     loadingScreen.classList.add("d-none");
@@ -224,7 +224,7 @@ function areaMeals(meal) {
     cartona = "";
     for (let i = 0; i < meal.length; i++) {
         cartona += `
-<div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer col-md-3 g-4">
+<div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer meals col-12 col-sm-6 col-md-4 col-lg-3 g-4">
 <div class=" position-relative overflow-hidden">
     <img src="${meal[i].strMealThumb}" class="w-100" alt="${meal[i].strMealThumb}">
     <div class="meal-layer position-absolute p-2">
@@ -232,7 +232,7 @@ function areaMeals(meal) {
     </div>
         </div>
         </div>
-`
+`;
     }
     document.querySelector("#content").innerHTML = cartona;
     loadingScreen.classList.add("d-none");
@@ -256,7 +256,7 @@ function ingredients(ingredient) {
     cartona = ""
     for (let i = 0; i < ingredient.length; i++) {
         cartona += `
-                <div onclick="getIngredientMeals('${ingredient[i].strIngredient}')" class="col-md-3 g-4">
+                <div onclick="getIngredientMeals('${ingredient[i].strIngredient}')" class="meals col-12 col-sm-6 col-md-4 col-lg-3 g-4">
     <div class=" cursor-pointer position-relative overflow-hidden text-white text-center">
         <i class="fa-solid fa-drumstick-bite fa-4x"></i>
         <h3>${ingredient[i].strIngredient}</h3>
@@ -285,7 +285,7 @@ function ingredientMeals(meal) {
     cartona = ""
     for (let i = 0; i < meal.length; i++) {
         cartona += `
-    <div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer col-md-3 g-4">
+    <div onclick="getMealDetails(${meal[i].idMeal})" class="cursor-pointer meals col-12 col-sm-6 col-md-4 col-lg-3 g-4">
     <div class=" position-relative overflow-hidden">
         <img src="${meal[i].strMealThumb}" class="w-100" alt="${meal[i].strMealThumb}">
         <div class="meal-layer position-absolute p-2">
@@ -293,7 +293,7 @@ function ingredientMeals(meal) {
         </div>
             </div>
             </div>
-               `
+               `;
 
                document.querySelector("#content").innerHTML = cartona;
                loadingScreen.classList.add("d-none");
@@ -443,16 +443,16 @@ async function getMealDetails(id) {
 }
 
 function mealDetails(details) {
-    document.querySelector("#searchPart").innerHTML = "";
-    cartona = "";
     recipes = "";
     tags = ""
 
     for (let i = 0; i <= 20; i++) {
         if (details[`strIngredient${i}`] && details[`strMeasure${i}`])
             recipes += `
-<li>${details[`strMeasure${i}`]} ${details[`strIngredient${i}`]}</li>
-`
+<li class="p-2">${details[`strMeasure${i}`]} ${
+              details[`strIngredient${i}`]
+            }</li>
+`;
     }
     if (details.strTags) {
         arrTags = details.strTags.split(",");
@@ -462,16 +462,21 @@ function mealDetails(details) {
 
     for (let i = 0; i < arrTags.length; i++) {
         tags += `
-<li>${arrTags[i]}</li>
-
+<li class="p-2">${arrTags[i]}</li>
 `
     }
 
-    cartona += `<div class="col-md-4 text-white">
-    <img class="w-100" src="${details.strMealThumb}" alt="${details.strMealThumb}">
-    <h2>${details.strMeal}</h2>
+    cartona += `
+    <div class="DetailsPage ps-5">
+    <div class="row mb-5 mx-auto container">
+                <div class="col-12 my-5 text-end text-white">
+                    <i onclick="closeTab()" class="fa fa-xmark fs-1"></i>
+                </div>
+                <div class="col-lg-4 col-12 text-white text-center">
+    <img class="w-100 rounded-2" src="${details.strMealThumb}" alt="${details.strMealThumb}">
+    <h2 class="my-3">${details.strMeal}</h2>
 </div>
-<div class="col-md-8 text-white">
+<div class="col-lg-8 detailMeal col-12 text-white">
     <h2>Instructions</h2>
     <p>${details.strInstructions}</p>
     <h3>Area : ${details.strArea}</h3>
@@ -486,10 +491,15 @@ ${recipes}
     </ul>
     <a target="_blank" class="btn bg-success text-white" href="${details.strSource}">Source</a>
     <a target="_blank" class="btn bg-danger text-white" href="${details.strYoutube}">Youtube</a>
-    `
+            </div>
+            </div>
+    `;
 
-    document.querySelector("#content").innerHTML = cartona;
+    document.querySelector("#mealDetails").innerHTML = cartona;
     loadingScreen.classList.add("d-none");
 }
 
-
+function closeTab() {
+    cartona="";
+  document.getElementById("mealDetails").innerHTML = "";
+}
